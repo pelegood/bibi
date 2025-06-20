@@ -1,0 +1,16 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.sport1.StoreController" spacing="10" style="-fx-padding: 10;">
+    <Label text="Спорт магазин" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+    <Label text="Доступные товары:" style="-fx-font-weight: bold;"/>
+    <ListView fx:id="productsList"/>
+    <Button text="Добавить в корзину" onAction="#addToCart"/>
+    <Label text="Ваша корзина:" style="-fx-font-weight: bold;"/>
+    <ListView fx:id="cartList"/>
+    <Label fx:id="totalLabel" text="Итого: 0 руб" style="-fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <Button text="Купить" onAction="#checkout"/>
+        <Button text="Очистить корзину" onAction="#clearCart"/>
+    </HBox>
+</VBox>
